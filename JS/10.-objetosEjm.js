@@ -1,0 +1,24 @@
+//objetos
+const web = {
+  nombre: 'bluwweb',
+  links: {
+    enlace: 'www.bluuweb.cl',
+  },
+  redesSociales: {
+    youtube: {
+      enlace: 'youtube.com/bluuweb',
+      nombre: 'bluuweb yt',
+    },
+  },
+};
+console.log(web); //{nombre: 'bluwweb', links: { enlace: 'www.bluuweb.cl' }, redesSociales: { youtube: { enlace: 'youtube.com/bluuweb', nombre: 'bluuweb yt' } }}
+
+//imprime solo el enlace de youtube
+const enlaceYT = web.redesSociales.youtube.enlace;
+console.log(enlaceYT); //youtube.com/bluuweb
+
+//usando destructuracion
+
+const { enlace, nombre } = web.redesSociales.youtube;
+console.log(enlace);
+console.log(nombre);

@@ -1,0 +1,18 @@
+//template string
+const numero = (num1, num2) => {
+  return `el numero es: ${num1 + num2}`;
+};
+const resultado = numero(10, 20);
+console.log(resultado); //30
+
+//Si solo tiene un return se puede quitar las llaves y el return
+const numeroDos = (num1, num2) => `el numero es: ${num1 + num2}`;
+const resultadoDos = numeroDos(30, 40);
+console.log(resultadoDos); //70
+
+//hacer lo mismo pero usar parentesis para que retorne lo de adentro de los parentesis
+const numeroTres = (num1, num2) => (
+    `el numero es: ${num1 + num2}`
+)
+const resultadoTres = numeroTres(50, 60);
+console.log(resultadoTres); //110

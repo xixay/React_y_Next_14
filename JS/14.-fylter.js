@@ -1,0 +1,23 @@
+//fylter devuelve un nuevo array
+//importar la libreria
+import fetch from 'node-fetch';
+
+//async await
+const obtenerPokemones = async () => {
+  try {
+    let arrayNombres = [];
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
+    const data = await res.json();
+    arrayNombres = data.results.filter(poke => poke.name === 'bulbasaur');
+    // arrayNombres = data.results.filter(poke => poke.name !== 'bulbasaur');
+    console.log(arrayNombres);
+  } catch (error) {
+    console.log(error);
+  }
+};
+obtenerPokemones();
+
+//respuesta nuevo array filtrado
+/**
+ * [ { name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/' } ]
+ */
