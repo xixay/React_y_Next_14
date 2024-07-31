@@ -1,53 +1,20 @@
-import imgUno from './assets/images/img-1.jpg'
-
+import ProTypes from 'prop-types'
 const MyButton = (props) => {
-console.log(props)
   return (
-    <button>{props.text}</button>
+    <button>{props.text} - {props.edad}</button>
   )
  }
 
-const OnlineText = () =>{
-  return (
-    <div>
-      <h3>Online</h3>
-    </div>
-  )
-}
-const OfflineText = () =>{
-  return (
-    <div>
-      <h3>Offline</h3>
-    </div>
-  )
-}
+ MyButton.proTypes = {
+  text: ProTypes.string.isRequired,//El campo sera string y sera requerido
+  edad: ProTypes.number.isRequired,//El campo sera numerico y sera requerido
+ }
+
 const App = () => {
-
-  const title = 'Mi titulo desde una constante';
-  const classTitle = 'text-center';
-  // const pathImg = 'src/assets/images/img-1.jpg';
-  const user = false;
-
-  const fruts =['manzana', 'platano', 'pera'];
-
   return (
-    <>
-      <h1 className={classTitle}>{title}</h1>
-      <img src={imgUno} alt={`imagen-${title}`} />
-
-      <MyButton text = 'botòn 1'/>
-      <MyButton text = 'botòn 2'/>
-      <MyButton text = 'botòn 3'/>
-      {user && <OnlineText/>}
-      <ul>
-        {
-          fruts.map((frut, index) => (
-            <li key={index}>{frut} - {index}</li>
-          ))
-        }
-      </ul>
-    </>
+    <div>
+      <MyButton text = 'text' edad = {10}></MyButton>
+    </div>
   )
 };
-
 export default App;
