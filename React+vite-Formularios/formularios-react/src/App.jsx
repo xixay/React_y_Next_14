@@ -2,10 +2,10 @@ import Nocontrolado from './components/NoControlado';
 
 const App = () => {
   return (
-    <>
+    <div className='container'>
+      <h1>Formularios</h1>
       <Nocontrolado />
-      <button className="btn btn-primary">Click Me</button>
-    </>
+    </div>
   );
 };
 export default App;
