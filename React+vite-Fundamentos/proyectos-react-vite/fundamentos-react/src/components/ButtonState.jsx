@@ -1,0 +1,23 @@
+//importar el useState
+import { useState } from 'react';
+
+const ButtonState = () => {
+  //hacer un contador
+  //   let count = 0;
+  //el uno es el valor inicial que tendra nuestro estado
+  //   const arrayState = useState(1);
+  const [count, setCount] = useState(1);
+
+  //   const stateNumber = arrayState[0];
+  //   const stateFunction = arrayState[1];
+  const handleClick = () => {
+    // count = count + 1;
+    // console.log('handleClick', count);
+    //Usar stateFuncion para modificar el valor, al pinchar aparecera el valor de de DOS
+    setCount(count + 1);
+  };
+
+  console.log(count);
+  return <button onClick={handleClick}>buttonState: {count}</button>;
+};
+export default ButtonState;
