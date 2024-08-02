@@ -4,6 +4,7 @@ const App = () => {
   return (
     <>
       <Nocontrolado />
+      <button className="btn btn-primary">Click Me</button>
     </>
   );
 };
