@@ -1,12 +1,11 @@
 import Nocontrolado from './components/NoControlado';
-import { Button } from 'primereact/button';
 
 const App = () => {
   return (
-    <>
+    <div className='container'>
+      <h1>Formularios</h1>
       <Nocontrolado />
-      <Button label="Click Me" icon="pi pi-check" />
-    </>
+    </div>
   );
 };
 export default App;
