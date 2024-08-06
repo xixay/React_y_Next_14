@@ -1,8 +1,16 @@
-/* Core CSS de PrimeReact */
-@import 'primereact/resources/themes/lara-light-blue/theme.css';
-@import 'primereact/resources/primereact.min.css';
+/* Estilos globales */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Iconos */
-@import 'primeicons/primeicons.css';
-/* index.css o App.css */
-@import 'primeflex/primeflex.css';
+/* Sobrescribir estilos de MUI si es necesario */
+.MuiButton-containedPrimary {
+  background-color: #007bff;
+}
+
+.MuiButton-containedPrimary:hover {
+  background-color: #0056b3;
+}
