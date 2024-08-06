@@ -1,63 +1,43 @@
-## Estructura Formulario JSX
-- Instalar PrimeFlex
-```console
-npm install primeflex
-```
-- Importar Primeflex a tus estilos ir a index.css
-```css
-/* Core CSS de PrimeReact */
-@import 'primereact/resources/themes/lara-light-blue/theme.css';
-@import 'primereact/resources/primereact.min.css';
-
-/* Iconos */
-@import 'primeicons/primeicons.css';
-/* index.css o App.css */
-@import 'primeflex/primeflex.css';
-```
-- Sabiendo que App.jsx era de la forma:
-```jsx
-import Nocontrolado from './components/NoControlado';
-
-const App = () => {
-  return (
-    <div className='container'>
-      <h1>Formularios</h1>
-      <Nocontrolado />
-    </div>
-  );
-};
-export default App;
-```
-- En el archivo NoControlado.jsx, donde name nos servira para el form data, en ves de usar id, para cada uno
-```jsx
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const Nocontrolado = () => {
-  const [state, setState] = useState(null);
+  const [state, setState] = useState('completado');
 
   const options = [
     { label: 'Pendiente', value: 'pendiente' },
     { label: 'Completado', value: 'completado' },
   ];
 
+  const form = useRef(null);
+  //Se crea la funcion que capturara el evento
+  const handleSubmit = (e) => {
+    e.preventDefault();//Se coloca para que no envie por defecto al url
+    // console.log(form.current);
+    const data = new FormData(form.current);
+    const { title, description, value } = Object.fromEntries([...data.entries()]);
+    console.log(title);
+    console.log(description);
+    console.log(value);
+  };
+
   return (
-    <form className="p-fluid">
+    <form onSubmit={handleSubmit} ref={form} className="p-fluid">
       <div className="field mb-3">
         <label htmlFor="title" className="block mb-2">
           Ingrese Todo
         </label>
-        <InputText name="title" />
+        <InputText name="title" defaultValue="todo #01"/>
       </div>
 
       <div className="field mb-3">
         <label htmlFor="description" className="block mb-2">
           Ingrese descripción
         </label>
-        <InputTextarea name="description" rows={5} />
+        <InputTextarea name="description" rows={5} defaultValue="descripcion #01"/>
       </div>
 
       <div className="field mb-3">
@@ -71,6 +51,7 @@ const Nocontrolado = () => {
           options={options}
           optionLabel="label"
           placeholder="Seleccione un estado"
+          defaultValue="pendiente"
         />
       </div>
 
@@ -81,6 +62,3 @@ const Nocontrolado = () => {
   );
 };
 export default Nocontrolado;
-
-```
-**![Normal](/React+vite-Formularios/imagenes/55b.-form.png)**
