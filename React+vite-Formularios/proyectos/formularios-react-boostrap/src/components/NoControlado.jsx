@@ -1,20 +1,24 @@
+import { useState } from 'react';
 import { useRef } from 'react';
 
 const Nocontrolado = () => {
   const form = useRef(null);
+  const [error, setError] = useState("")
   //Se crea la funcion que capturara el evento
   const handleSubmit = (e) => {
     e.preventDefault();//Se coloca para que no envie por defecto al url
+    //al inicio del formulario poner el mensaje de error vacio, por defecto
+    setError('');
     // console.log(form.current);
     //Capturar datos
     const data = new FormData(form.current);
     const { title, description, state } = Object.fromEntries([...data.entries()]);
-    //validar datos
-    if(title.trim() === '') return console.log('Llena este dato')
-      console.log(title);
-      console.log(description);
-      console.log(state);
-    //Enviar Datos
+    //validar los datos
+    if(!title.trim() || !description.trim() || !state.trim()) return setError('Llena todos los campos');
+    //Enviar los Datos
+    console.log(title);
+    console.log(description);
+    console.log(state);
   };
 
   return (
@@ -39,6 +43,7 @@ const Nocontrolado = () => {
       <button className="btn btn-primary" type="submit">
         Procesar
       </button>
+      {error != "" && error}
     </form>
   );
 };

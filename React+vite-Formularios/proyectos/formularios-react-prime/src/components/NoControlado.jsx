@@ -13,19 +13,22 @@ const Nocontrolado = () => {
   ];
 
   const form = useRef(null);
+  const [error, setError] = useState("");
   //Se crea la funcion que capturara el evento
   const handleSubmit = (e) => {
     e.preventDefault();//Se coloca para que no envie por defecto al url
+    //al inicio del formulario poner el mensaje de error vacio, por defecto
+    setError('');
     // console.log(form.current);
     //Capturar datos
     const data = new FormData(form.current);
     const { title, description, value } = Object.fromEntries([...data.entries()]);
-    //validar datos
-    if(title.trim() === '') return console.log('Llena este dato')
+    //validar los datos
+    if(!title.trim() || !description.trim() || !value.trim()) return setError('Llena todos los campos');
+    //Enviar Datos
     console.log(title);
     console.log(description);
     console.log(value);
-    //Enviar Datos
   };
 
   return (
@@ -61,6 +64,7 @@ const Nocontrolado = () => {
 
       <div className="field mb-3 mt-4">
         <Button label="Procesar" icon="pi pi-check" type="submit" className="w-full" />
+        {error != "" && error}
       </div>
     </form>
   );
