@@ -1,18 +1,18 @@
-//template string
+//Las template strings permiten crear cadenas dinámicas usando la sintaxis `${}` para insertar variables o expresiones.
 const numero = (num1, num2) => {
   return `el numero es: ${num1 + num2}`;
 };
 const resultado = numero(10, 20);
-console.log(resultado); //30
+console.log(resultado); //'El número es: 30'
 
-//Si solo tiene un return se puede quitar las llaves y el return
+//Si solo hay un return, puedes simplificar eliminando las llaves y la palabra clave return:
 const numeroDos = (num1, num2) => `el numero es: ${num1 + num2}`;
 const resultadoDos = numeroDos(30, 40);
-console.log(resultadoDos); //70
+console.log(resultadoDos); //'El número es: 110'
 
-//hacer lo mismo pero usar parentesis para que retorne lo de adentro de los parentesis
+//Los paréntesis pueden envolver el retorno si es más claro o necesario
 const numeroTres = (num1, num2) => (
     `el numero es: ${num1 + num2}`
 )
 const resultadoTres = numeroTres(50, 60);
-console.log(resultadoTres); //110
+console.log(resultadoTres); //'El número es: 110'

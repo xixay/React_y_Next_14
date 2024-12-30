@@ -1,9 +1,9 @@
-//fetch
+//fetch es una API que permite hacer solicitudes HTTP (como GET, POST, etc.) en JavaScript, y es muy útil para interactuar con APIs.
 
-//instalar la libreria que nos permitira usar fetch directamente en js:
+//Instalar la librería node-fetch para usar fetch en Node.js: Si estás usando Node.js, puedes instalar la librería node-fetch para permitir el uso de fetch de manera nativa:
 //npm install node-fetch
 
-//agregar al package.json, la libreria
+//Actualizar el package.json: Asegúrate de que tu package.json incluya la propiedad "type": "module" para usar módulos ES6:
 /**
 {
   "type": "module", añadido
@@ -13,10 +13,10 @@
 }
  */
 
-//importar la libreria
+//Importar node-fetch: Para usar fetch, debes importarlo en tu archivo JS:
 import fetch from 'node-fetch';
 
-//imprimir los datos osea data
+//Usamos fetch para obtener datos de la API y los mostramos en la consola.
 fetch('https://pokeapi.co/api/v2/pokemon/')
   .then(res => {
     return res.json(); // Solo convierte a JSON no devuelve
@@ -25,7 +25,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
     console.log(data); // Devuelve la respuesta
   });
 
-//imprimir los datos osea data sin return y llaves
+//Si quieres simplificar la sintaxis, puedes omitir el return y las llaves de la función de flecha:
 fetch('https://pokeapi.co/api/v2/pokemon/')
   .then(
     res => res.json() // Solo convierte a JSON no devuelve
@@ -67,8 +67,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
 }
  */
 
-//devolver solo los results, que es un array de objetos
-//imprimir los datos osea data sin return y llaves
+//Extraer solo la propiedad results (un array): Si solo te interesa el array results de la respuesta, puedes acceder a él de la siguiente manera:
 fetch('https://pokeapi.co/api/v2/pokemon/')
   .then(
     res => res.json() // Solo convierte a JSON no devuelve
@@ -102,7 +101,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
 ]
  */
 
-//imprimir cada elemento del array results con un foreach
+//Imprimir cada nombre de Pokémon usando forEach: Si quieres imprimir cada nombre de Pokémon en el array results, puedes usar forEach:
 fetch('https://pokeapi.co/api/v2/pokemon/')
   .then(
     res => res.json() // Solo convierte a JSON no devuelve
@@ -113,7 +112,7 @@ fetch('https://pokeapi.co/api/v2/pokemon/')
     });
   });
 
-  //si falla en el catch se captura el error
+  //Capturar y manejar errores usando catch: Si ocurre algún error durante la solicitud o el procesamiento de la respuesta, puedes capturarlo y manejarlo con un bloque catch:
   fetch('https://pokeapi.co/api/v2/pokemon/')
   .then(
     res => res.json() // Solo convierte a JSON no devuelve

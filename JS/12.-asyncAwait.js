@@ -1,34 +1,35 @@
+// Usando el método tradicional con .then y .catch para manejar promesas:
 //importar la libreria
 import fetch from 'node-fetch';
 
 //fetch
 fetch('https://pokeapi.co/api/v2/pokemon/')
-.then(
-  res => res.json() // Solo convierte a JSON no devuelve
-)
-.then(data => {
-  data.results.forEach(element => {
-    console.log(element.name);
-  });
-})
-.catch(error => console.log(error))
+  .then(res => res.json()) // Convierte a JSON
+  .then(data => {
+    data.results.forEach(element => {
+      console.log(element.name); // Imprime el nombre de cada Pokémon
+    });
+  })
+  .catch(error => console.log(error)); // Captura y muestra cualquier error
 
-//async await en ves de then
-//al tener await, va esperar que termine esto primero, por ello imprimira esta funcion antes que la de arriba
-const obtenerPockemones = async () => {
+//Convertir el código anterior a async/await:
+// Función asincrónica que utiliza await
+const obtenerPokemones = async () => {
   try {
+    // Esperar a que fetch termine y obtener la respuesta
     const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
-    const data = await res.json()//convierte a json
-    console.log(data.results);
+    // Convertir la respuesta a JSON
+    const data = await res.json();
+    console.log(data.results); // Imprime el array de resultados
   } catch (error) {
-    console.log(error);
+    console.log(error); // Captura y muestra cualquier error
   }
 };
 
-//llamar a la funcion
-obtenerPockemones();
+// Llamar a la función asincrónica
+obtenerPokemones();
 
-//resultados
+//Cuando se ejecuta este código con async/await, se obtiene la siguiente salida, primero mostrando los datos completos y luego los nombres de los Pokémon:
 /**
  * [
   { name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/' },
