@@ -15,14 +15,14 @@ const App = () => {
   const frutsTwo = ['naranja', 'melon', 'sandia'];
 
   return (
-    <>
+    <>S
     <ButtonState/>
       <h1 className={classTitle}>{title}</h1>
       <img src={imgUno} alt={`imagen-${title}`} />
 
-      <MyButton text="botòn 1" />
-      <MyButton text="botòn 2" />
-      <MyButton text="botòn 3" />
+      <MyButton text="botón 1" />
+      <MyButton text="botón 2" />
+      <MyButton text="botón 3" />
       <WelcomeText user={user} />
       <ListFruts fruts={fruts} />
       <ListFruts fruts={frutsTwo} />
