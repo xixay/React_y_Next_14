@@ -48,14 +48,21 @@
 | **61. Solución de Tarea** | [Ver](https://github.com/xixay/React_y_Next_14_Boostrap/blob/main/docs/61.-error.md) | **62. Formularios controlados (Introducción)** | [Ver](https://github.com/xixay/React_y_Next_14_Boostrap/blob/main/docs/62.-introControlados.md) |
 | **63. onChange** | [Ver](https://github.com/xixay/React_y_Next_14_Boostrap/blob/main/docs/63.-onChange.md) | **64. useState con objetos** | [Ver](https://github.com/xixay/React_y_Next_14_Boostrap/blob/main/docs/64.-useStateConObjetos.md) |
 
-### 3.5. Usando MUI
+### 3.2. Usando MUI
 
 | Tema | Enlace | Tema | Enlace |
 |------|--------|------|--------|
 | **55. reactMui** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/55.-reactMui.md) | **56. Estructura Formulario JSX** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/56.-estructuraForm.md) |
 | **57. onSubmit** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/57.-onSubmit.md) | **58. useRef** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/58.-useRef.md) |
 | **59. formData** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/59.-formData.md) | **60. Validaciones** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/60.-validaciones.md) |
-| **61. Solución de Tarea** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/61.-error.md) | **62. Formularios controlados (Introducción)** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/62.-introControlados.md) |
-| **63. onChange** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/63.-onChange.md) | **64. useState con objetos** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/64.-useStateConObjetos.md) |
+| **61. Solución de Tarea** | [Ver](https://github.com/xixay/React_y_Next_14_Mui/blob/main/docs/61.-error.md) | | |
+
+### 3.2. Usando PrimeReac
+| Tema | Enlace | Tema | Enlace |
+|------|--------|------|--------|
+| **55. PrimeReact** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/55.-primeReact.md) | **56. Estructura Formulario JSX** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/56.-estructuraForm.md) |
+| **57. onSubmit** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/57.-onSubmit.md) | **58. useRef** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/58.-useRef.md) |
+| **59. formData** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/59.-formData.md) | **60. Validaciones** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/60.-validaciones.md) |
+| **61. Solución de Tarea** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/61.-error.md) | | |
 
 [<< INDICE](https://github.com/xixay/ayuda-memoria/tree/main)
