@@ -1,4 +1,4 @@
-[<< INDICE](https://github.com/xixay/ayuda-memoria/tree/main)
+[<< INDICE](https://xixay.github.io/ayuda-memoria/)
 # React y Next_14
 ## 1. Fundamentos de Java Script
 
@@ -65,4 +65,4 @@
 | **59. formData** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/59.-formData.md) | **60. Validaciones** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/60.-validaciones.md) |
 | **61. Solución de Tarea** | [Ver](https://github.com/xixay/React_y_Next_14_Prime/blob/main/docs/61.-error.md) | | |
 
-[<< INDICE](https://github.com/xixay/ayuda-memoria/tree/main)
+[<< INDICE](https://xixay.github.io/ayuda-memoria/)
