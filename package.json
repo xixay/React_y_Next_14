@@ -1,0 +1,26 @@
+{
+  "name": "react_y_next_14",
+  "version": "1.0.0",
+  "description": "[<< INDICE](https://xixay.github.io/ayuda-memoria/) # React y Next_14 ## 1. Fundamentos de Java Script",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xixay/React_y_Next_14.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xixay/React_y_Next_14/issues"
+  },
+  "homepage": "https://github.com/xixay/React_y_Next_14#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
